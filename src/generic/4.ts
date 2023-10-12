@@ -11,10 +11,10 @@ this.props = props
 }
 
 interface IPage {
-  pageInfo: () => void 
+  title: string
 }
 
-class Page extends Component<{title:string}> implements IPage {
+class Page extends Component<IPage> {
   pageInfo () {
     console.log(this.props.title);
   }

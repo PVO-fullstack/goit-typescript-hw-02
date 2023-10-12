@@ -13,13 +13,8 @@ enum WeekDays {
   Sunday
 }
 
-type Day = keyof typeof WeekDays
-
-function isWeekend(day:Day) {
-  if (day === "Saturday" || day === "Sunday") {
-  return true
-} else false
-
+function isWeekend(day:WeekDays):boolean {
+  return (day === WeekDays.Saturday || day === WeekDays.Sunday) 
 }
 
-isWeekend("Monday");
+isWeekend(WeekDays.Monday);
